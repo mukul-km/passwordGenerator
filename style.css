@@ -1,0 +1,197 @@
+:root {
+  --primary-color: hsl(204, 100%, 60%);
+
+  --box-color: hsl(0, 0%, 100%);
+
+  --btn-color: hsl(212, 100%, 50%);
+
+  --text-white: hsl(0, 0%, 100%);
+
+  --light-gray: hsl(0, 0%, 80%);
+
+  --weak: hsl(0, 100%, 60%);
+  --medium: hsl(60, 90%, 60%);
+  --strong: hsl(120, 100%, 60%);
+}
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+textarea {
+  white-space: revert;
+}
+
+html {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100dvh;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--box-color);
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 2px 2px 8px hsla(0, 0%, 0%, 0.5);
+}
+
+header {
+  padding: 0.75rem 1.25rem;
+  border-bottom: 2px solid var(--light-gray);
+  margin-bottom: 1.1rem;
+}
+
+header h2 {
+  font-size: 1.3rem;
+  color: var(--btn-color);
+}
+
+.container {
+  margin: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 0.6rem;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  padding-right: 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  background-color: var(--text-white);
+  border: 2px solid var(--light-gray);
+}
+
+.copy-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.3rem;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.copy-icon:active {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.password-strength {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.password-strength span {
+  height: 3.2px;
+  width: 32%;
+  border-radius: 5px;
+  background-color: var(--light-gray);
+}
+
+.password-strength .weak {
+  background-color: var(--weak);
+}
+.password-strength .medium {
+  background-color: var(--medium);
+}
+.password-strength .strong {
+  background-color: var(--strong);
+}
+
+.password-length {
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  width: 90%;
+}
+
+.slider-value {
+  text-align: center;
+  width: 10%;
+  padding-left: 0.6rem;
+  color: var(--btn-color);
+}
+
+.password-settings {
+  margin-bottom: 1.25rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(0, 0%, 30%);
+}
+
+.options .option {
+  width: calc(50% - 0.25rem);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  gap: 5px;
+}
+.option label,
+.option input {
+  cursor: pointer;
+}
+
+.generate-btn {
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  color: var(--text-white);
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1.75em;
+  transition: transform 0.3s ease;
+}
+
+.generate-btn:active {
+  transform: scale(0.9);
+  background-color: hsl(212, 100%, 40%);
+}
