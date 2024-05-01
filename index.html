@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <header><h2>Password Generator</h2></header>
+
+      <main class="container">
+        <div class="input-box">
+          <input type="text" disabled />
+          <img class="copy-icon" src="./image/copy.svg" alt="" />
+        </div>
+        <div class="password-strength">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="password-length">
+          <div class="title">Password Length</div>
+          <div class="details">
+            <input
+              class="slider"
+              type="range"
+              min="1"
+              max="30"
+              step="1"
+              onchange="setValue()"
+            />
+            <span class="slider-value">8</span>
+          </div>
+        </div>
+
+        <div class="password-settings">
+          <div class="title">Password Settings</div>
+
+          <ul class="options">
+            <li class="option">
+              <input type="checkbox" name="" id="lowercase" checked />
+              <label for="lowercase">Lowercase (a-z)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" name="" id="uppercase" />
+              <label for="uppercase">Uppercase (A-Z)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" name="" id="numbers" />
+              <label for="numbers">Numbers (0-9)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" name="" id="symbols" />
+              <label for="symbols">Symbols (@#!$)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" name="" id="exclude-duplicate" />
+              <label for="exclude-duplicate">Exclude Duplicate</label>
+            </li>
+          </ul>
+        </div>
+
+        <button class="generate-btn">GENERATE PASSWORD</button>
+      </main>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
