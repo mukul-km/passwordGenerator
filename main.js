@@ -99,9 +99,9 @@ function checkPasswordStrength() {
   });
 
   if (selectedOption <= 2) {
-    strengthType = length < 8 ? "weak" : length > 16 ? "medium" : "weak";
+    strengthType = length < 14 ? "weak" : length > 22 ? "strong" : "medium";
   } else if (selectedOption == 3) {
-    strengthType = length < 8 ? "weak" : length > 16 ? "strong" : "medium";
+    strengthType = length < 10 ? "weak" : length > 16 ? "strong" : "medium";
   } else if (selectedOption == 4) {
     strengthType = length < 6 ? "weak" : length > 10 ? "strong" : "medium";
   }
